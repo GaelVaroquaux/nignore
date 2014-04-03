@@ -257,7 +257,7 @@ class IntraStats(object):
         self.study_id = study_id
         self.model_id = model_id
         if masker is None:
-            self.masker = MultiNiftiMasker()
+            self.masker = MultiNiftiMasker(mask_strategy='epi')
         else:
             self.masker = masker
         self.hrf_model = hrf_model
